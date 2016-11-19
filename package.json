@@ -1,0 +1,29 @@
+{
+  "name": "restproxy",
+  "version": "1.0.1",
+  "description": "Model your REST APIs as an object's properties/functions with no boilerplate.",
+  "main": "index.js",
+  "dependencies": {
+    "superagent": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhead/restproxy.git"
+  },
+  "keywords": [
+    "rest",
+    "api",
+    "proxy",
+    "json"
+  ],
+  "author": "Justin Head <jhead@jxh.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jhead/restproxy/issues"
+  },
+  "homepage": "https://github.com/jhead/restproxy#readme"
+}
