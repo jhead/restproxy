@@ -102,6 +102,41 @@ const options = {
 const api = restproxy('api.example.com', options);
 ```
 
+## Headers
+You can easily set default headers on your RestProxy object as well as append
+headers for individual requests.
+
+```JavaScript
+const options = {
+  headers: {
+    // Unnecessary, this one is included by default
+    'Content-Type': 'application/json',
+    // But you can add other global headers as well
+    'X-Token': 'my-token'
+  }
+};
+
+const api = restproxy('api.example.com', options);
+
+api
+  .users
+  .get(); // Content-Type + X-Token headers
+
+// You can also specify headers on individual requests
+api
+  .header('Accept', 'text/html')
+  .users
+  .get();
+
+// Subsequent requests on the same API object will retain global headers
+// but NOT headers on previous requests, avoiding unintended side-effects.
+//
+// i.e. No 'Accept: text/html' header
+api
+  .users
+  .get();
+```
+
 ## HTTP library
 RestProxy uses `superagent` to perform requests. I'm looking into possibly
 supporting other libraries as well, PRs are welcome.
