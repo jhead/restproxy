@@ -1,6 +1,6 @@
 {
   "name": "restproxy",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Model your REST APIs as an object's properties/functions with no boilerplate.",
   "main": "index.js",
   "dependencies": {
